@@ -5,7 +5,7 @@ return {
         opts = {
             colors = {
                 light_grey = "require('onedarkpro.helpers').darken('white', 50, 'onedark_dark')",
-                dark_purple = "require('onedarkpro.helpers').darken('purple', 58, 'onedark')",
+                dark_purple = "require('onedarkpro.helpers').darken('purple', 50, 'onedark_dark')",
             },
             highlights = {
                 PmenuSel = {
@@ -16,6 +16,9 @@ return {
                 },
                 NeoTreeGitUntracked = {
                     fg = "#ef596f",
+                },
+                LineNr = {
+                    fg = "#DECBF2",
                 },
             },
             styles = {

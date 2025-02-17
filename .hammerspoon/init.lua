@@ -190,6 +190,7 @@ end
 -- 🔹 창 포커스 변경 감지
 local windowFilter = wf.new()
 windowFilter:subscribe(wf.windowFocused, function(win)
+	print(win:application())
 	if win and win:application():name() == "Ghostty" then
 		disableHotkeys() -- Ghostty 포커스 시 핫키 비활성화
 	else
@@ -206,8 +207,11 @@ end
 hs.hotkey.bind({ "alt" }, "T", function()
 	focusApp("Ghostty")
 end)
-hs.hotkey.bind({ "alt" }, "B", function()
+hs.hotkey.bind({ "alt" }, "A", function()
 	focusApp("Arc")
+end)
+hs.hotkey.bind({ "alt" }, "G", function()
+	focusApp("Google Chrome")
 end)
 hs.hotkey.bind({ "alt" }, "O", function()
 	focusApp("Obsidian")
@@ -224,16 +228,7 @@ hs.hotkey.bind({ "ctrl", "cmd" }, "O", function()
 end)
 
 -- Config Reload
-local reloadConfig = function(files)
-	for _, file in pairs(files) do
-		if file:sub(-4) == ".lua" then
-			hs.reload()
-		end
-	end
-end
-
-hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reloadConfig):start()
-hs.alert.show("Config loaded")
 hs.hotkey.bind({ "ctrl", "cmd" }, "r", function()
 	hs.reload()
+	hs.alert.show("Config loaded")
 end)
