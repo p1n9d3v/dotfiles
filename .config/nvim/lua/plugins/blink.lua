@@ -19,6 +19,8 @@ return {
             signature = { enabled = true, window = { border = "single" } },
             keymap = {
                 preset = "super-tab",
+                ["<C-e>"] = { "hide", "fallback" },
+                ["<C-y>"] = { "select_and_accept", "fallback" },
                 ["<CR>"] = { "accept", "fallback" },
                 ["<C-j>"] = { "select_next", "fallback" },
                 ["<C-k>"] = { "select_prev", "fallback" },
