@@ -16,3 +16,7 @@ cd $HOME/dotfiles && stow . --adopt && cd -
 ollama run llama3.2 "<text>"
 
 
+% nvim 
+
+# Sync nvim lua to dotfiles
+cp -r ~/.config/nvim/lua ~/dotfiles/.config/nvim

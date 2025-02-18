@@ -20,6 +20,8 @@ return {
                 LineNr = {
                     fg = "#DECBF2",
                 },
+                Visual = { bg = "#2A288F" },
+                BlinkCmpGhostText = { fg = "#E0CBF2" },
             },
             styles = {
                 keywords = "italic",
