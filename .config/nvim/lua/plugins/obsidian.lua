@@ -36,6 +36,13 @@ return {
             attachments = {
                 img_folder = "Assets/imgs",
             },
+            picker = {
+                -- Set your preferred picker. Can be one of 'telescope.nvim', 'fzf-lua', or 'mini.pick'.
+                name = "fzf-lua",
+                -- Optional, configure key mappings for the picker. These are the defaults.
+                -- Not all pickers support all mappings.
+            },
+            disable_frontmatter = false,
             note_id_func = function(title)
                 local suffix = ""
                 if title == nil then

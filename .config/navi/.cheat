@@ -20,3 +20,15 @@ ollama run llama3.2 "<text>"
 
 # Sync nvim lua to dotfiles
 cp -r ~/.config/nvim/lua ~/dotfiles/.config/nvim
+
+
+% quartz
+
+# build and serve
+
+npx quartz build --serve
+
+
+# sync
+
+npx quartz sync
