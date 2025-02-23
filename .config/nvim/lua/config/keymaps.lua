@@ -55,7 +55,7 @@ keymap.set("n", "<S-l>", "vg_", opts)
 keymap.set("n", "<S-h>", "v_", opts)
 
 -- Diagnostics
-keymap.set("n", "<leader>xj", function()
+keymap.set("n", "<leader>xn", function()
     vim.diagnostic.goto_next()
 end, {
     desc = "Jump to next diagnostic",
@@ -63,7 +63,7 @@ end, {
     silent = true,
 })
 
-keymap.set("n", "<leader>xk", function()
+keymap.set("n", "<leader>xp", function()
     vim.diagnostic.goto_prev()
 end, {
     desc = "Jump to previous diagnostic",

@@ -51,6 +51,7 @@
           "devtoys"
           "ollama"
           "google-chrome"
+          "slack"
           # "obsidian"
           # "raycast"
         ];
