@@ -8,7 +8,7 @@ return {
         -- for example
         provider = "claude",
         auto_suggestions_provider = "claude",
-        copilot = { model = "claude-3-5-sonnet-20241022" },
+        copilot = { model = "claude-3-7-sonnet" },
         hints = { enabled = false },
         file_selector = {
             provider = "snacks",
