@@ -8,7 +8,7 @@
 # Matches are substitution rules: when you type the "trigger" string
 # it gets replaced by the "replace" string.
 matches:
-    - trigger: ':date'
+    - trigger: ':utils:date'
       replace: '{{date}}'
       vars:
           - name: date
@@ -16,7 +16,7 @@ matches:
             params:
                 format: '%Y/%m/%d'
 
-    - trigger: ':lorem'
+    - trigger: ':utils:lorem'
       replace: "Lorem Ipsum is simply dummy text of | the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 
     - trigger: ':prompt:build'
@@ -64,6 +64,8 @@ matches:
           2. Security vulnerabilities
           3. Design pattern improvements
           4. Error handling gaps
+
+          translate to korean.
       form_fields:
           code:
               multiline: true
