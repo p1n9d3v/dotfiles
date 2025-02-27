@@ -36,6 +36,8 @@
           pkgs.navi
           pkgs.nodejs_22
           pkgs.pngpaste
+          pkgs.gh
+          pkgs.dwt1-shell-color-scripts
         ];
 
       # Homebrew

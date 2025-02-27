@@ -9,3 +9,5 @@ vim.opt.shiftwidth = 4
 vim.opt.mouse = ""
 
 vim.g.ai_cmp = true
+
+vim.api.nvim_set_hl(0, "SnacksDashboardHeader", { fg = "#ffffff" })
