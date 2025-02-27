@@ -1,18 +1,18 @@
 % nix
 
-# update nix pkgs
+# Update nix pkgs
 darwin-rebuild switch --flake $HOME/dotfiles/.config/nix#$USER
 
 
 % dotfiles
 
-# adopt stow
+# Adopt stow
 cd $HOME/dotfiles && stow . --adopt && cd -
 
 
 % ollama
 
-# run llama3.2 inline
+# Run llama3.2 inline
 ollama run llama3.2 "<text>"
 
 
@@ -24,11 +24,11 @@ cp -r ~/.config/nvim/lua ~/dotfiles/.config/nvim
 
 % quartz
 
-# build and serve
+# Serve 
 
 npx quartz build --serve
 
 
-# sync
+# Upload
 
 npx quartz sync
