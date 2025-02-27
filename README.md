@@ -46,6 +46,9 @@
 - [rip2](https://github.com/MilesCranmer/rip2) : A tool for converting ripgrep results into a more user-friendly format.
 - [navi](https://github.com/denisidoro/navi) : An interactive cheatsheet tool for the command line.
 - [pngpaste](https://github.com/jcsalterego/pngpaste) : Paste PNG into files on MacOS, much like pbpaste does for text.
+- [gh](https://cli.github.com/) : Github CLI.
+    - notify : `gh ext install meiji163/gh-notify`
+- [shell color script](https://gitlab.com/dwt1/shell-color-scripts) : A collection of terminal color scripts.
 
 ## Editor
 
