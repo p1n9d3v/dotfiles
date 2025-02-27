@@ -29,7 +29,6 @@
 ## Shell tools
 
 - [neovim](https://github.com/neovim/neovim) : A highly configurable text editor built to enable efficient and productive text editing.
-- [mkalias](https://github.com/reckenrode/mkalias) : A tool to create command line aliases easily.
 - [git](https://github.com/git/git) : A distributed version control system for tracking changes in source code.
 - [gcc14](https://github.com/gcc-mirror/gcc) : The GNU Compiler Collection, a set of compilers for various programming languages.
 - [nushell](https://github.com/nushell/nushell) : A modern shell that brings a new approach to command line usage with structured data.
