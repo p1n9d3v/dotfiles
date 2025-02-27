@@ -18,7 +18,6 @@
       environment.systemPackages =
         [ 
           pkgs.neovim
-          pkgs.mkalias
           pkgs.git
           pkgs.gcc14
           pkgs.nushell
