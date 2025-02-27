@@ -2,10 +2,11 @@
 
 ## Applications
 
-- [Arc](https://arc.net/) : A modern web browser designed for a new browsing experience.
-- [Zen](https://zen-browser.app/) : A minimalist browser focused on providing a distraction-free environment.
+- [Arc](https://arc.net/) : Browser
+- [Zen](https://zen-browser.app/) : Browser
+- [Chrome](https://www.google.com/chrome/) : Browser
 - [Obsidian](https://obsidian.md/) : A powerful markdown editor for knowledge management and note-taking.
-- [Ghostty](https://ghostty.org/) : A terminal application designed for efficient command line usage.
+- [Ghostty](https://www.google.com/chrome/) : A terminal application designed for efficient command line usage.
 - [Espanso](https://espanso.org/) : A text expander that helps you type faster by expanding snippets.
 - [Raycast](https://www.raycast.com/) : A productivity tool that allows you to control your Mac and apps with commands.
 - [DevToys](https://devtoys.app/) : A set of tools for developers to simplify their workflow.
