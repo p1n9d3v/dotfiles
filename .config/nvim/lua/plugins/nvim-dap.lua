@@ -56,6 +56,22 @@ return {
           args = { os.getenv("HOME") .. "/.config/nvim/debug/js-debug/src/dapDebugServer.js", "${port}" },
         },
       }
+
+      dap.adapters.dart = {
+        type = "executable",
+        command = "dart",
+        -- This command was introduced upstream in https://github.com/dart-lang/sdk/commit/b68ccc9a
+        args = { "debug_adapter" },
+      }
+      dap.configurations.dart = {
+        {
+          type = "dart",
+          request = "launch",
+          name = "Dart: Run Current File",
+          program = "${file}",
+          cwd = "${workspaceFolder}",
+        },
+      }
     end,
   },
   {

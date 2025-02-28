@@ -43,7 +43,10 @@
       # Homebrew
       homebrew = {
         enable = true;
-        brews = [ "posting" ];
+        brews = [ 
+            "posting"
+            "cocoapods" 
+        ];
         casks = [
           "hammerspoon"
           "ghostty"
@@ -54,6 +57,7 @@
           "google-chrome"
           "slack"
           "flutter"
+          "android-studio"
           # "obsidian"
           # "raycast"
         ];
