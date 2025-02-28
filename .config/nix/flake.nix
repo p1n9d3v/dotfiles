@@ -38,6 +38,7 @@
           pkgs.pngpaste
           pkgs.gh
           pkgs.dwt1-shell-color-scripts
+          pkgs.lazydocker
         ];
 
       # Homebrew
@@ -58,6 +59,7 @@
           "slack"
           "flutter"
           "android-studio"
+          "docker"
           # "obsidian"
           # "raycast"
         ];

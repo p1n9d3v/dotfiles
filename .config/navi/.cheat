@@ -32,3 +32,44 @@ npx quartz build --serve
 # Upload
 
 npx quartz sync
+
+
+% docker
+
+# Run(interactive)
+
+docker run -it <container-id> <shell>
+
+
+# Build
+
+docker build <path-to-dockerfile>
+
+# List Images
+
+docker images
+
+
+# List Running Containers
+
+docker ps
+
+# List All Containers
+
+docker ps -a
+
+
+# Start
+
+docker start <container-id>
+
+# Connect
+
+docker exec -it <container-id> <shell>
+
+# Remove Image
+
+docker rmi <image-id>
+
+# Remove Container
+docker rm <container-id>
