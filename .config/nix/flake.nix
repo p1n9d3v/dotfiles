@@ -53,6 +53,7 @@
           "ollama"
           "google-chrome"
           "slack"
+          "flutter"
           # "obsidian"
           # "raycast"
         ];
