@@ -232,3 +232,5 @@ hs.hotkey.bind({ "ctrl", "cmd" }, "r", function()
 	hs.reload()
 	hs.alert.show("Config loaded")
 end)
+
+

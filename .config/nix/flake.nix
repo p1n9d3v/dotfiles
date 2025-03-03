@@ -39,6 +39,7 @@
           pkgs.gh
           pkgs.dwt1-shell-color-scripts
           pkgs.lazydocker
+          pkgs.dive
         ];
 
       # Homebrew
