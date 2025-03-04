@@ -21,6 +21,9 @@ return {
       debounce = 1000,
       throttle = 1000,
     },
+    web_search_engine = {
+      provider = "google", -- tavily, serpapi, searchapi, google or kagi
+    },
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
   build = "make",
