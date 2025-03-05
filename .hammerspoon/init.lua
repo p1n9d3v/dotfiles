@@ -1,26 +1,44 @@
 local hotkey = require("hs.hotkey")
 local wf = require("hs.window.filter")
 
-local inputSource = {
-	english = "com.apple.keylayout.ABC",
-	korean = "com.apple.inputmethod.Korean.2SetKorean",
+local inputSourceHotkey = {
+	mods = { "ctrl" },
+	key = "space",
 }
 
+hs.hotkey.bind(inputSourceHotkey.mods, inputSourceHotkey.key, function()
+	-- Create and send Control+Shift+Space keystroke
+	local event = hs.eventtap.event.newKeyEvent({ "ctrl", "shift" }, "space", true)
+	event:post()
+
+	-- Release the key after a short delay
+	hs.timer.doAfter(0.05, function()
+		local releaseEvent = hs.eventtap.event.newKeyEvent({ "ctrl", "shift" }, "space", false)
+		releaseEvent:post()
+	end)
+
+	-- Provide visual feedback (optional)
+	hs.alert.show("Input Source Changed")
+end)
+
 -- Input Source
-local changeInputSource = function()
-	local current = hs.keycodes.currentSourceID()
-	local nextInput = nil
-
-	if current == inputSource.english then
-		nextInput = inputSource.korean
-	else
-		nextInput = inputSource.english
-	end
-
-	hs.keycodes.currentSourceID(nextInput)
-end
-
-hs.hotkey.bind("shift", "space", changeInputSource)
+-- local inputSource = {
+-- 	english = "com.apple.keylayout.ABC",
+-- 	korean = "com.apple.inputmethod.Korean.2SetKorean",
+-- }
+-- local changeInputSource = function()
+-- 	local current = hs.keycodes.currentSourceID()
+-- 	local nextInput = nil
+--
+-- 	if current == inputSource.english then
+-- 		nextInput = inputSource.korean
+-- 	else
+-- 		nextInput = inputSource.english
+-- 	end
+--
+-- 	hs.keycodes.currentSourceID(nextInput)
+-- end
+-- hs.hotkey.bind("shift", "space", changeInputSource)
 
 -- Storke
 local stroke_arrow = function(arrow_key, modifier)
@@ -232,5 +250,3 @@ hs.hotkey.bind({ "ctrl", "cmd" }, "r", function()
 	hs.reload()
 	hs.alert.show("Config loaded")
 end)
-
-

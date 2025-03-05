@@ -62,8 +62,8 @@
           "flutter"
           "android-studio"
           "docker"
-          # "obsidian"
-          # "raycast"
+          "obsidian"
+          "raycast"
         ];
         onActivation.cleanup="zap";
         onActivation.autoUpdate = true;
