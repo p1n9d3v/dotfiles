@@ -105,14 +105,17 @@ fi
 ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
- export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CONFIG_HOME="$HOME/.config"
 
- export GEMINI_API_KEY=$GEMINI_KEY
- export ANTHROPIC_API_KEY=$ANTHROPIC_KEY
- export GOOGLE_SEARCH_API_KEY=$GOOGLE_KEY
+export GEMINI_API_KEY=$GEMINI_KEY
+export ANTHROPIC_API_KEY=$ANTHROPIC_KEY
+export GOOGLE_SEARCH_API_KEY=$GOOGLE_KEY
 
- export EDITOR=/run/current-system/sw/bin/nvim
- export NAVI_PATH=$HOME/.config/navi
+export EDITOR=/run/current-system/sw/bin/nvim
+export NAVI_PATH=$HOME/.config/navi
 
- eval $(thefuck --alias)
+eval $(thefuck --alias)
 
+
+export PATH=~/.npm-packages/bin:$PATH
+export NODE_PATH=~/.npm-packages/lib/node_modules

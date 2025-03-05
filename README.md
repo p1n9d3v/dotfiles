@@ -26,6 +26,18 @@
 - [Flake](https://nixos.wiki/wiki/Flakes) : A new way to manage Nix packages and configurations, providing a more reproducible and composable approach to Nix expressions.
 - [Homebrew](https://brew.sh/) : A popular package manager for macOS and Linux, simplifying the installation of software and libraries.
 
+### Installing NPM Packages Globally in Nix
+
+Add the following to your ~/.npmrc to have it put the packages in the ~/.npm-packages folder:
+
+`prefix = ${HOME}/.npm-packages`
+You need to add the npm bin folder to your PATH in your shell’s rc file (i.e. .bashrc or .zshrc for example, so you can access the executables:
+
+`export PATH=~/.npm-packages/bin:$PATH`
+You also need to add the NODE_PATH to the same file:
+
+`export NODE_PATH=~/.npm-packages/lib/node_modules`
+
 ## Shell tools
 
 - [neovim](https://github.com/neovim/neovim) : A highly configurable text editor built to enable efficient and productive text editing.
@@ -53,6 +65,21 @@
 ## Editor
 
 - [Lazyvim](https://www.lazyvim.org/)
+
+### LazyExtras and Others
+
+- [snear-cursor](https://github.com/sphamba/smear-cursor.nvim)
+- [nvim-dap](https://github.com/mfussenegger/nvim-dap)
+- [debug-chrome](https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation#javascript-chrome)
+- [mini-surround](https://github.com/echasnovski/mini.surround)
+- [mini-files](https://github.com/echasnovski/mini.files)
+- [formmating-prettier](https://github.com/MunifTanjim/prettier.nvim)
+
+- [gh-notify](https://github.com/meiji163/gh-notify)
+- [autocommit2](https://github.com/tak-bro/aicommit2)
+
+- lang.typescript
+- lang.tailwind
 
 ## Others
 

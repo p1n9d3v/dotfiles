@@ -1,4 +1,3 @@
-local neogenScript = require("neogen.configurations.typescript")
 return {
   "danymat/neogen",
   config = true,

@@ -3,6 +3,17 @@ return {
   opts = {
     scroll = { enabled = false },
 
+    picker = {
+
+      win = {
+        list = {
+          keys = {
+            ["ss"] = "edit_split",
+            ["sv"] = "edit_vsplit",
+          },
+        },
+      },
+    },
     dashboard = {
       width = 90,
       preset = {
@@ -43,7 +54,7 @@ return {
           local cmds = {
             {
               title = "Notifications",
-              cmd = "gh notify -s -a -n5",
+              cmd = "gh notify -s -a -n5", -- #gh ext install meiji163/gh-notify
               action = function()
                 vim.ui.open("https://github.com/notifications")
               end,
