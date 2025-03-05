@@ -4,7 +4,11 @@
 darwin-rebuild switch --flake $HOME/dotfiles/.config/nix#$USER
 
 # Install nix darwin
-nix run nix-darwin/master#darwin-rebuild -- switch --flake ~/dotfiles/.config/nix
+nix run nix-darwin/master#darwin-rebuild -- switch --flake $HOME/dotfiles/.config/nix#$USER
+
+
+# update nix
+nix flake  update nix-darwin --flake $HOME/dotfiles/.config/nix
 
 
 % dotfiles
