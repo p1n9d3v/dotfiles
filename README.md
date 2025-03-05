@@ -60,7 +60,8 @@ You also need to add the NODE_PATH to the same file:
 - [pngpaste](https://github.com/jcsalterego/pngpaste) : Paste PNG into files on MacOS, much like pbpaste does for text.
 - [gh](https://cli.github.com/) : Github CLI.
     - notify : `gh ext install meiji163/gh-notify`
-- [shell color script](https://gitlab.com/dwt1/shell-color-scripts) : A collection of terminal color scripts.
+- [fd](https://github.com/sharkdp/fd) : A simple, fast and user-friendly alternative to find.
+- [shell-color-script](https://gitlab.com/dwt1/shell-color-scripts) : A collection of terminal color scripts.
 
 ## Editor
 
@@ -73,7 +74,8 @@ You also need to add the NODE_PATH to the same file:
 - [debug-chrome](https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation#javascript-chrome)
 - [mini-surround](https://github.com/echasnovski/mini.surround)
 - [mini-files](https://github.com/echasnovski/mini.files)
-- [formmating-prettier](https://github.com/MunifTanjim/prettier.nvim)
+- [formatting-prettier](https://github.com/MunifTanjim/prettier.nvim)
+- [refactoring](https://github.com/ThePrimeagen/refactoring.nvim)
 
 - [gh-notify](https://github.com/meiji163/gh-notify)
 - [autocommit2](https://github.com/tak-bro/aicommit2)
