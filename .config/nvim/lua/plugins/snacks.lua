@@ -3,9 +3,6 @@ return {
     opts = {
         scroll = { enabled = false },
 
-        explorer = {
-            replace_netrw = true,
-        },
         picker = {
             win = {
                 list = {
@@ -16,7 +13,7 @@ return {
                 },
             },
             sources = {
-                files = { hidden = true, exclude = { "node_modules" } },
+                files = { hidden = true },
             },
         },
         dashboard = {

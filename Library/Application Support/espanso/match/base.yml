@@ -77,7 +77,7 @@ matches:
     - trigger: ':prompt:doc'
       form: |
           You are a [[field] expert. I need to implement 
-          [[feature]]. 
+          [[feature]]
           Walk me through:
 
           1. The relevant API methods/classes
