@@ -2,7 +2,7 @@ local hotkey = require("hs.hotkey")
 local wf = require("hs.window.filter")
 
 local inputSourceHotkey = {
-	mods = { "ctrl" },
+	mods = { "shift" },
 	key = "space",
 }
 
