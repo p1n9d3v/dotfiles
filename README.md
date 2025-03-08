@@ -76,6 +76,7 @@ You also need to add the NODE_PATH to the same file:
 - [mini-files](https://github.com/echasnovski/mini.files)
 - [formatting-prettier](https://github.com/MunifTanjim/prettier.nvim)
 - [refactoring](https://github.com/ThePrimeagen/refactoring.nvim)
+- [luasnip](https://github.com/L3MON4D3/LuaSnip)
 
 - [gh-notify](https://github.com/meiji163/gh-notify)
 - [autocommit2](https://github.com/tak-bro/aicommit2)
