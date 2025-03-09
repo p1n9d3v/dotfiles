@@ -14,3 +14,5 @@ vim.o.shell = "/bin/zsh"
 
 -- Dashboard Header
 vim.api.nvim_set_hl(0, "SnacksDashboardHeader", { fg = "#ffffff" })
+
+vim.g.lazyvim_eslint_auto_format = true
