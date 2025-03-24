@@ -14,6 +14,15 @@ return {
             },
             sources = {
                 files = { hidden = true },
+                explorer = {
+                    win = {
+                        list = {
+                            wo = {
+                                relativenumber = true,
+                            },
+                        },
+                    },
+                },
             },
         },
         dashboard = {
