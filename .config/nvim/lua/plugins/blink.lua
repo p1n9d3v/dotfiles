@@ -24,7 +24,7 @@ return {
                 ["<C-y>"] = { "select_and_accept", "fallback" },
                 ["<CR>"] = { "accept", "fallback" },
                 ["<C-j>"] = { "select_next", "fallback" },
-                ["<C-k>"] = { "select_prev", "fallback" },
+                ["<C-k>"] = { "select_prev" },
             },
             completion = {
                 menu = { border = "single" },
