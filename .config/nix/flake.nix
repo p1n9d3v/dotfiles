@@ -5,7 +5,8 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:LnL7/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
-	  nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+    nix-homebrew.url = "github:zhaofengli/nix-homebrew";
+    # nix-homebrew.url = "git+https://github.com/zhaofengli/nix-homebrew?ref=refs/pull/71/merge";
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
@@ -64,6 +65,7 @@
           "docker"
           "obsidian"
           "raycast"
+          "claude"
         ];
         onActivation.cleanup="zap";
         onActivation.autoUpdate = true;
@@ -106,6 +108,7 @@
           "/Applications/DevToys.app"
           "/Applications/Ollama.app"
           "/Applications/AppCleaner.app"
+          "/Applications/Claude.app"
         ];
       };
 
