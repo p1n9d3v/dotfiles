@@ -6,7 +6,7 @@ local opts = { noremap = true, silent = true }
 
 -- ESC --
 keymap.set("n", "<C-]>", function()
-  vim.fn.feedkeys(":", "n") -- ':' 명령어 입력을 시뮬레이션
+    vim.fn.feedkeys(":", "n") -- ':' 명령어 입력을 시뮬레이션
 end, opts)
 
 -- Increament and Decreament number
@@ -56,19 +56,19 @@ keymap.set("n", "<S-h>", "v_", opts)
 
 -- Diagnostics
 keymap.set("n", "<leader>xn", function()
-  vim.diagnostic.goto_next()
+    vim.diagnostic.goto_next()
 end, {
-  desc = "Jump to next diagnostic",
-  noremap = true,
-  silent = true,
+    desc = "Jump to next diagnostic",
+    noremap = true,
+    silent = true,
 })
 
 keymap.set("n", "<leader>xp", function()
-  vim.diagnostic.goto_prev()
+    vim.diagnostic.goto_prev()
 end, {
-  desc = "Jump to previous diagnostic",
-  noremap = true,
-  silent = true,
+    desc = "Jump to previous diagnostic",
+    noremap = true,
+    silent = true,
 })
 
 -- Multi Cursor
@@ -79,3 +79,8 @@ keymap.set("n", "<C-k>", "<Plug>(VM-Add-Cursor-Up)", opts)
 keymap.set("c", "<C-j>", 'pumvisible() ? "<c-n>" : "<C-j>"', { expr = true, noremap = true })
 keymap.set("c", "<C-k>", 'pumvisible() ? "<c-p>" : "<C-k>"', { expr = true, noremap = true })
 keymap.set("c", "<C-e>", "<C-c>", opts)
+
+--- hover and signature
+keymap.set({ "n", "i" }, "<C-q>", function()
+    vim.lsp.buf.hover()
+end, opts)

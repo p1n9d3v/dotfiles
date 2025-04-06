@@ -10,13 +10,9 @@ return {
         "neovim/nvim-lspconfig",
         opts = function(_)
             local keys = require("lazyvim.plugins.lsp.keymaps").get()
-            local cmp = require("blink-cmp")
+            keys[#keys + 1] = { "K", "<nop>", desc = "Disabled" }
+            --     local cmp = require("blink-cmp")
             -- disable a keymap
-            -- keys[#keys + 1] = {
-            --     "K",
-            --     mode = { "n" },
-            --     function() end,
-            -- }
             -- keys[#keys + 1] = {
             --     "K",
             --     false,
