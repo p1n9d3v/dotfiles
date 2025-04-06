@@ -42,6 +42,7 @@
           pkgs.lazydocker
           pkgs.dive
           pkgs.fd
+          pkgs.yazi
         ];
 
       # Homebrew

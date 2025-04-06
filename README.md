@@ -14,6 +14,7 @@
 - [AppCleaner](https://freemacsoft.net/appcleaner/) : A utility for uninstalling applications on macOS cleanly.
 - [hammerspoon](https://www.hammerspoon.org/) : A powerful automation tool for macOS using Lua scripting.
 - [posting](https://posting.sh/) : The API client app in terminal.
+- [Claude](https://www.claude.ai/) : Claude is an AI-powered chatbot that can help you write better emails, reports, and documentation.
 
 ## Package Managers
 
@@ -62,6 +63,8 @@ You also need to add the NODE_PATH to the same file:
     - notify : `gh ext install meiji163/gh-notify`
 - [fd](https://github.com/sharkdp/fd) : A simple, fast and user-friendly alternative to find.
 - [shell-color-script](https://gitlab.com/dwt1/shell-color-scripts) : A collection of terminal color scripts.
+- [yazi](https://github.com/sxyazi/yazi) : Blazing Fast Terminal File Manager
+    - theme : [onedark](https://github.com/BennyOe/onedark.yazi)
 
 ## Editor
 
