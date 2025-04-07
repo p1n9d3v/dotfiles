@@ -43,6 +43,7 @@
           pkgs.dive
           pkgs.fd
           pkgs.yazi
+          pkgs.lua
         ];
 
       # Homebrew
