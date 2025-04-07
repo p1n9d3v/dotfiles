@@ -15,6 +15,9 @@ return {
             max_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models)
             --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
         },
+        ollama = {
+            model = "llama3.2:latest",
+        },
         -- hints = { enabled = false },
         file_selector = {
             provider = "snacks",
@@ -23,9 +26,9 @@ return {
         behaviour = {
             auto_suggestions = false,
         },
-        web_search_engine = {
-            provider = "google", -- tavily, serpapi, searchapi, google or kagi
-        },
+        -- web_search_engine = {
+        --     provider = "google", -- tavily, serpapi, searchapi, google or kagi
+        -- },
     },
     -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
     build = "make",
