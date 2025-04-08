@@ -8,33 +8,5 @@ return {
     },
     {
         "neovim/nvim-lspconfig",
-        opts = function(_)
-            local keys = require("lazyvim.plugins.lsp.keymaps").get()
-            keys[#keys + 1] = { "K", "<nop>", desc = "Disabled" }
-            --     local cmp = require("blink-cmp")
-            -- disable a keymap
-            -- keys[#keys + 1] = {
-            --     "K",
-            --     false,
-            -- }
-            -- keys[#keys + 1] = {
-            --     "<C-k>",
-            --     false,
-            -- }
-            -- keys[#keys + 1] = {
-            --     "<C-z>",
-            --     mode = { "i" },
-            --     function()
-            --         vim.lsp.buf.signature_help()
-            --     end,
-            -- }
-            -- keys[#keys + 1] = {
-            --     "<C-z>",
-            --     mode = { "n" },
-            --     function()
-            --         vim.lsp.buf.hover()
-            --     end,
-            -- }
-        end,
     },
 }

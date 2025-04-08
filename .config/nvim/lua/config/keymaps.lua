@@ -50,6 +50,10 @@ keymap.set("n", "<C-h>", "^", opts)
 keymap.set("n", "<C-e>", "$", opts)
 keymap.set("n", "<C-l>", "$", opts)
 
+-- Move Screen Up and Down
+keymap.set("n", "<C-u>", "<C-u>zz")
+keymap.set("n", "<C-d>", "<C-d>zz")
+
 -- Visual Line
 keymap.set("n", "<S-l>", "vg_", opts)
 keymap.set("n", "<S-h>", "v_", opts)
@@ -81,6 +85,19 @@ keymap.set("c", "<C-k>", 'pumvisible() ? "<c-p>" : "<C-k>"', { expr = true, nore
 keymap.set("c", "<C-e>", "<C-c>", opts)
 
 --- hover and signature
-keymap.set({ "n", "i" }, "<C-q>", function()
+keymap.set({ "n" }, "gs", function()
+    vim.lsp.buf.signature_help()
+end, opts)
+
+keymap.set({ "n" }, "gh", function()
     vim.lsp.buf.hover()
+end, opts)
+
+--- disable  <c-k> and change <c-q> to signature help
+keymap.set("i", "<C-k>", "<nop>", opts)
+keymap.set("n", "<C-q>", function()
+    vim.lsp.buf.hover()
+end, opts)
+keymap.set("i", "<C-q>", function()
+    vim.lsp.buf.signature_help()
 end, opts)

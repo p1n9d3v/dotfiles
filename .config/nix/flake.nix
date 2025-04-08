@@ -52,6 +52,7 @@
         brews = [ 
             "posting"
             "cocoapods" 
+            "openjdk"
         ];
         casks = [
           "hammerspoon"
