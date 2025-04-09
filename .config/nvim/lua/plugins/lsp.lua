@@ -2,11 +2,21 @@ return {
     {
         "neovim/nvim-lspconfig",
         opts = {
-            inlay_hints = { enabled = false },
             servers = {},
+            inlay_hints = { enabled = false },
         },
     },
     {
         "neovim/nvim-lspconfig",
+        opts = function(_, opts)
+            local keys = require("lazyvim.plugins.lsp.keymaps").get()
+            -- change a keymap
+
+            for i, key in ipairs(keys) do
+                if key[1] == "<c-k>" then
+                    keys[i] = { "<c-k>", false }
+                end
+            end
+        end,
     },
 }

@@ -93,8 +93,6 @@ keymap.set({ "n" }, "gh", function()
     vim.lsp.buf.hover()
 end, opts)
 
---- disable  <c-k> and change <c-q> to signature help
-keymap.set("i", "<C-k>", "<nop>", opts)
 keymap.set("n", "<C-q>", function()
     vim.lsp.buf.hover()
 end, opts)
