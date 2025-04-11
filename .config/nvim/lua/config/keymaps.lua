@@ -85,11 +85,11 @@ keymap.set("c", "<C-k>", 'pumvisible() ? "<c-p>" : "<C-k>"', { expr = true, nore
 keymap.set("c", "<C-e>", "<C-c>", opts)
 
 --- hover and signature
-keymap.set({ "n" }, "gs", function()
+keymap.set({ "n" }, "gk", function()
     vim.lsp.buf.signature_help()
 end, opts)
 
-keymap.set({ "n" }, "gh", function()
+keymap.set({ "n" }, "gK", function()
     vim.lsp.buf.hover()
 end, opts)
 

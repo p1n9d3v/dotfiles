@@ -15,6 +15,13 @@ return {
             max_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models)
             --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
         },
+        gemini = {
+            endpoint = "https://generativelanguage.googleapis.com/v1beta/models",
+            model = "gemini-2.0-flash",
+            timeout = 30000,
+            temperature = 0,
+            max_tokens = 8192,
+        },
         ollama = {
             model = "llama3.2:latest",
         },

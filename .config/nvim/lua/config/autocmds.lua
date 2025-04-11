@@ -14,3 +14,13 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.opt_local.shiftwidth = 2
     end,
 })
+
+vim.api.nvim_create_augroup("JSLogMacro", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+    group = "JSLogMacro",
+    pattern = { "javascript", "typescript", "javascriptreact", "typescriptreact" },
+    callback = function()
+        local esc = vim.api.nvim_replace_termcodes("<Esc>", true, true, true)
+        vim.fn.setreg("l", "yoconsole.log('" .. esc .. "pa:" .. esc .. "la, " .. esc .. "pl") --NOTE: ^[ is the escape key
+    end,
+})
