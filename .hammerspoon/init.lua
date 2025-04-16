@@ -21,25 +21,6 @@ hs.hotkey.bind(inputSourceHotkey.mods, inputSourceHotkey.key, function()
 	hs.alert.show("Input Source Changed")
 end)
 
--- Input Source
--- local inputSource = {
--- 	english = "com.apple.keylayout.ABC",
--- 	korean = "com.apple.inputmethod.Korean.2SetKorean",
--- }
--- local changeInputSource = function()
--- 	local current = hs.keycodes.currentSourceID()
--- 	local nextInput = nil
---
--- 	if current == inputSource.english then
--- 		nextInput = inputSource.korean
--- 	else
--- 		nextInput = inputSource.english
--- 	end
---
--- 	hs.keycodes.currentSourceID(nextInput)
--- end
--- hs.hotkey.bind("shift", "space", changeInputSource)
-
 -- Storke
 local stroke_arrow = function(arrow_key, modifier)
 	local event = require("hs.eventtap").event
@@ -236,6 +217,12 @@ hs.hotkey.bind({ "alt" }, "O", function()
 end)
 hs.hotkey.bind({ "alt" }, "C", function()
 	focusApp("Claude")
+end)
+hs.hotkey.bind({ "alt" }, "E", function()
+	local android = hs.application.find("qemu")
+	android:activate()
+	local simulator = hs.application.find("Simulator")
+	simulator:activate()
 end)
 
 hs.hotkey.bind({ "ctrl", "cmd" }, "T", function()
