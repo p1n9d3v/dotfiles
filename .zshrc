@@ -113,6 +113,7 @@ export GOOGLE_SEARCH_API_KEY=$GOOGLE_KEY
 
 export EDITOR=/run/current-system/sw/bin/nvim
 export NAVI_PATH=$HOME/.config/navi
+export ANDROID_HOME=$HOME/Library/Android/sdk
 
 eval $(thefuck --alias)
 
