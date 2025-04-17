@@ -220,9 +220,13 @@ hs.hotkey.bind({ "alt" }, "C", function()
 end)
 hs.hotkey.bind({ "alt" }, "E", function()
 	local android = hs.application.find("qemu")
-	android:activate()
+	if android ~= nil then
+		android:activate()
+	end
 	local simulator = hs.application.find("Simulator")
-	simulator:activate()
+	if simulator ~= nil then
+		simulator:activate()
+	end
 end)
 
 hs.hotkey.bind({ "ctrl", "cmd" }, "T", function()
