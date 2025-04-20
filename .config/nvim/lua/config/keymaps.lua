@@ -57,6 +57,8 @@ keymap.set("n", "<C-d>", "<C-d>zz")
 -- Visual Line
 keymap.set("n", "<S-l>", "vg_", opts)
 keymap.set("n", "<S-h>", "v_", opts)
+keymap.set("v", "<S-l>", "$")
+keymap.set("v", "<S-h>", "^")
 
 -- Diagnostics
 keymap.set("n", "<leader>xn", function()

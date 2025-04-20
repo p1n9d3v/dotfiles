@@ -53,6 +53,7 @@
             "posting"
             "cocoapods" 
             "openjdk"
+            "luarocks"
         ];
         casks = [
           "hammerspoon"
