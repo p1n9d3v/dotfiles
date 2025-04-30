@@ -1,4 +1,3 @@
-.config/nix/flake.lock
 *.log
 __pycache__
 package-lock.json
