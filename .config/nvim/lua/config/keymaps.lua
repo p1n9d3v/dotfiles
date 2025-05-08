@@ -89,15 +89,8 @@ keymap.set("c", "<C-e>", "<C-c>", opts)
 --- hover and signature
 keymap.set({ "n" }, "gk", function()
     vim.lsp.buf.signature_help()
-end, opts)
+end, vim.tbl_extend("force", opts, { desc = "Signature Help" }))
 
-keymap.set({ "n" }, "gK", function()
+keymap.set({ "n" }, "gh", function()
     vim.lsp.buf.hover()
-end, opts)
-
-keymap.set("n", "<C-q>", function()
-    vim.lsp.buf.hover()
-end, opts)
-keymap.set("i", "<C-q>", function()
-    vim.lsp.buf.signature_help()
-end, opts)
+end, vim.tbl_extend("force", opts, { desc = "Hover" }))

@@ -17,7 +17,6 @@ return {
         lazy = true,
         dependencies = { "L3MON4D3/LuaSnip", version = "v2.*" },
         opts = {
-            signature = { enabled = true, window = { border = "single" } },
             snippets = { preset = "luasnip" },
             keymap = {
                 ["<C-e>"] = { "hide", "fallback" },

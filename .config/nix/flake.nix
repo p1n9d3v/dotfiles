@@ -6,19 +6,20 @@
     nix-darwin.url = "github:LnL7/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
-    # nix-homebrew.url = "git+https://github.com/zhaofengli/nix-homebrew?ref=refs/pull/71/merge";
+    # neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, ... }:
   let
     configuration = { pkgs, config, ... }: {
       nixpkgs.config.allowUnfree = true;
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       # Packages
+
       environment.systemPackages =
         [ 
-          pkgs.neovim
+          # inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
           pkgs.git
           pkgs.gcc14
           pkgs.nushell
@@ -54,6 +55,7 @@
             "cocoapods" 
             "openjdk"
             "luarocks"
+            "neovim"
         ];
         casks = [
           "hammerspoon"

@@ -2,7 +2,17 @@ return {
     {
         "neovim/nvim-lspconfig",
         opts = {
-            servers = {},
+            -- servers = {
+            --     lua_ls = {
+            --         settings = {
+            --             Lua = {
+            --                 completion = {
+            --                     keywordSnippet = "Both",
+            --                 },
+            --             },
+            --         },
+            --     },
+            -- },
             inlay_hints = { enabled = false },
         },
     },

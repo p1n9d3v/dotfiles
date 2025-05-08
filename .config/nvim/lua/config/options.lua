@@ -18,3 +18,8 @@ vim.g.lazyvim_eslint_auto_format = true
 
 -- Disable shada file
 vim.o.shadafile = "NONE"
+
+-- Diagnostics
+vim.diagnostic.config({
+    virtual_lines = true,
+})

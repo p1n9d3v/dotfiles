@@ -1,9 +1,6 @@
 return {
     "folke/noice.nvim",
     opts = {
-        presets = {
-            bottom_search = false,
-        },
         routes = {
             {
                 filter = {
@@ -12,6 +9,9 @@ return {
                 },
                 opts = { skip = true },
             },
+        },
+        presets = {
+            bottom_search = true,
         },
     },
 }
