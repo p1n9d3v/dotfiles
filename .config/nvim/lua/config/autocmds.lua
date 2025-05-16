@@ -24,3 +24,11 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.fn.setreg("l", "yoconsole.log('" .. esc .. "pa:" .. esc .. "la, " .. esc .. "pl") --NOTE: ^[ is the escape key
     end,
 })
+
+local autocmd = vim.api.nvim_create_autocmd
+autocmd("BufWritePre", {
+    pattern = { "*.ts", "*.tsx", "*.js", "*.jsx" },
+    callback = function()
+        vim.cmd("EslintFixAll")
+    end,
+})

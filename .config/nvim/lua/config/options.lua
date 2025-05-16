@@ -21,5 +21,9 @@ vim.o.shadafile = "NONE"
 
 -- Diagnostics
 vim.diagnostic.config({
-    virtual_lines = true,
+    virtual_lines = {
+        current_line = true,
+    },
 })
+
+vim.g.autoformat = true
