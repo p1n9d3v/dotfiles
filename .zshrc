@@ -76,6 +76,7 @@ alias n=navi
 alias rm=rip
 alias ol=ollama
 alias tl=tldr
+alias tm='task-master'
 
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
@@ -109,7 +110,8 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 export GEMINI_API_KEY=$GEMINI_KEY
 export ANTHROPIC_API_KEY=$ANTHROPIC_KEY
-export GOOGLE_SEARCH_API_KEY=$GOOGLE_KEY
+export GOOGLE_SEARCH_API_KEY=$GOOGLE_SEARCH_KEY
+export GOOGLE_SEARCH_ENGINE_ID=$GOOGLE_SEARCH_ENGINE_ID
 
 export EDITOR=/run/current-system/sw/bin/nvim
 export NAVI_PATH=$HOME/.config/navi
@@ -133,3 +135,5 @@ function y() {
 	# rm -f -- "$tmp"
     rm -- "$tmp"
 }
+
+

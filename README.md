@@ -15,6 +15,7 @@
 - [hammerspoon](https://www.hammerspoon.org/) : A powerful automation tool for macOS using Lua scripting.
 - [posting](https://posting.sh/) : The API client app in terminal.
 - [Claude](https://www.claude.ai/) : Claude is an AI-powered chatbot that can help you write better emails, reports, and documentation.
+- [OrbStack](https://www.orbstack.dev/) : is the fast, light, and easy way to run Docker containers
 
 ## Package Managers
 
@@ -72,26 +73,74 @@ You also need to add the NODE_PATH to the same file:
 
 ### LazyExtras and Others
 
-- [snear-cursor](https://github.com/sphamba/smear-cursor.nvim)
+- [avante.nvim](https://github.com/yetone/avante.nvim)
+- [blink.cmp](https://github.com/abrookins/blink.cmp)
+- [blink.compat](https://github.com/abrookins/blink.compat)
+- [conform.nvim](https://github.com/stevearc/conform.nvim)
+- [dart-vim-plugin](https://github.com/dart-lang/dart-vim-plugin)
+- [dressing.nvim](https://github.com/stevearc/dressing.nvim)
+- [flash.nvim](https://github.com/folke/flash.nvim)
+- [flutter-tools.nvim](https://github.com/akinsho/flutter-tools.nvim)
+- [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
+- [fzf-lua](https://github.com/ibhagwan/fzf-lua)
+- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+- [img-clip.nvim](https://github.com/HakonHarnes/img-clip.nvim)
+- [lazy.nvim](https://github.com/folke/lazy.nvim)
+- [lazydev.nvim](https://github.com/MeanderingProgrammer/lazydev.nvim)
+- [LazyVim](https://github.com/LazyVim/LazyVim)
+- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
+- [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
+- [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
+- [mason.nvim](https://github.com/williamboman/mason.nvim)
+- [mini.ai](https://github.com/echasnovski/mini.ai)
+- [mini.icons](https://github.com/echasnovski/mini.icons)
+- [mini.move](https://github.com/echasnovski/mini.move)
+- [mini.pairs](https://github.com/echasnovski/mini.pairs)
+- [mini.pick](https://github.com/echasnovski/mini.pick)
+- [neogen](https://github.com/danymat/neogen)
+- [noice.nvim](https://github.com/folke/noice.nvim)
+- [nui.nvim](https://github.com/MunifTanjim/nui.nvim)
+- [nvim-lint](https://github.com/mfussenegger/nvim-lint)
+- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [nvim-treesitter-textobjects](https://github.com/nvim-treesitter/nvim-treesitter-textobjects)
+- [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag)
+- [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
+- [obsidian.nvim](https://github.com/epwalsh/obsidian.nvim)
+- [onedarkpro.nvim](https://github.com/olimorris/onedarkpro.nvim)
+- [persistence.nvim](https://github.com/folke/persistence.nvim)
+- [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
+- [refactoring.nvim](https://github.com/ThePrimeagen/refactoring.nvim)
+- [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)
+- [smear-cursor.nvim](https://github.com/XuehaiPan/smear-cursor.nvim)
+- [snacks.nvim](https://github.com/LucasTavaresA/snacks.nvim)
+- [supermaven-nvim](https://github.com/joeldrapper/supermaven-nvim)
+- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+- [todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
+- [trouble.nvim](https://github.com/folke/trouble.nvim)
+- [ts-comments.nvim](https://github.com/LucasTavaresA/ts-comments.nvim)
+- [vim-pencil](https://github.com/preservim/vim-pencil)
+- [vim-visual-multi](https://github.com/mg979/vim-visual-multi)
+- [which-key.nvim](https://github.com/folke/which-key.nvim)
+- [catppuccin](https://github.com/catppuccin/nvim)
+- [grug-far.nvim](https://github.com/hazeycode/grug-far.nvim)
+- [kulala.nvim](https://github.com/charludo/kulala.nvim)
+- [lazygit.nvim](https://github.com/kdheepak/lazygit.nvim)
+- [mason-nvim-dap.nvim](https://github.com/jay-babu/mason-nvim-dap.nvim)
+- [mini.files](https://github.com/echasnovski/mini.files)
+- [mini.surround](https://github.com/echasnovski/mini.surround)
 - [nvim-dap](https://github.com/mfussenegger/nvim-dap)
-- [debug-chrome](https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation#javascript-chrome)
-- [mini-surround](https://github.com/echasnovski/mini.surround)
-- [mini-files](https://github.com/echasnovski/mini.files)
-- [formatting-prettier](https://github.com/MunifTanjim/prettier.nvim)
-- [refactoring](https://github.com/ThePrimeagen/refactoring.nvim)
-- [luasnip](https://github.com/L3MON4D3/LuaSnip)
-- [rest(kulala)](https://github.com/mistweaverco/kulala.nvim?tab=readme-ov-file)
-- linting-eslint
-
-- [gh-notify](https://github.com/meiji163/gh-notify)
-- [autocommit2](https://github.com/tak-bro/aicommit2)
-
-- lang.typescript
-- lang.tailwind
+- [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)
+- [nvim-dap-virtual-text](https://github.com/theHamsta/nvim-dap-virtual-text)
+- [nvim-nio](https://github.com/nvim-neotest/nvim-nio)
+- [octo.nvim](https://github.com/pwntester/octo.nvim)
+- [SchemaStore.nvim](https://github.com/b0o/SchemaStore.nvim)
+- [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
 
 ## Others
 
 - vimium
+- [claude taskmanager ai](https://github.com/eyaltoledano/claude-task-master)
 
 ```text
 unmap <c-u>

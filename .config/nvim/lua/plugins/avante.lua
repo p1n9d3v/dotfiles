@@ -33,9 +33,10 @@ return {
         behaviour = {
             auto_suggestions = false,
         },
-        -- web_search_engine = {
-        --     provider = "google", -- tavily, serpapi, searchapi, google or kagi
-        -- },
+        web_search_engine = {
+            provider = "google", -- tavily, serpapi, searchapi, google, kagi, brave, or searxng
+            proxy = nil, -- proxy support, e.g., http://127.0.0.1:7890
+        },
     },
     -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
     build = "make",

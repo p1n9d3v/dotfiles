@@ -6,7 +6,6 @@
     nix-darwin.url = "github:LnL7/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
-    # neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, ... }:
@@ -19,7 +18,6 @@
 
       environment.systemPackages =
         [ 
-          # inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
           pkgs.git
           pkgs.gcc14
           pkgs.nushell
@@ -78,6 +76,7 @@
         onActivation.upgrade = true;
       };
 
+      system.primaryUser = "p1n9";
 
       # Mac Application
 

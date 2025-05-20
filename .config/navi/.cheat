@@ -13,7 +13,7 @@ nix flake  update nix-darwin --flake $HOME/dotfiles/.config/nix
 
 % dotfiles
 
-# Adopt stow
+# Adopt stow adopt
 cd $HOME/dotfiles && stow . --adopt && cd -
 
 
@@ -41,42 +41,3 @@ npx quartz build --serve
 npx quartz sync
 
 
-% docker
-
-# Run(interactive)
-
-docker run -it <container-id> <shell>
-
-
-# Build
-
-docker build <path-to-dockerfile>
-
-# List Images
-
-docker images
-
-
-# List Running Containers
-
-docker ps
-
-# List All Containers
-
-docker ps -a
-
-
-# Start
-
-docker start <container-id>
-
-# Connect
-
-docker exec -it <container-id> <shell>
-
-# Remove Image
-
-docker rmi <image-id>
-
-# Remove Container
-docker rm <container-id>
