@@ -124,7 +124,7 @@ You also need to add the NODE_PATH to the same file:
 - [which-key.nvim](https://github.com/folke/which-key.nvim)
 - [catppuccin](https://github.com/catppuccin/nvim)
 - [grug-far.nvim](https://github.com/hazeycode/grug-far.nvim)
-- [kulala.nvim](https://github.com/charludo/kulala.nvim)
+- [kulala.nvim](https://github.com/mistweaverco/kulala.nvim)
 - [lazygit.nvim](https://github.com/kdheepak/lazygit.nvim)
 - [mason-nvim-dap.nvim](https://github.com/jay-babu/mason-nvim-dap.nvim)
 - [mini.files](https://github.com/echasnovski/mini.files)

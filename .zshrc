@@ -108,6 +108,7 @@ ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 
 export XDG_CONFIG_HOME="$HOME/.config"
 
+export GEMINI_FREE_API_KEY=$GEMINI_FREE_KEY
 export GEMINI_API_KEY=$GEMINI_KEY
 export ANTHROPIC_API_KEY=$ANTHROPIC_KEY
 export GOOGLE_SEARCH_API_KEY=$GOOGLE_SEARCH_KEY
@@ -123,6 +124,7 @@ eval $(thefuck --alias)
 
 
 export PATH=~/.npm-packages/bin:$PATH
+export PATH=~/.npm-global/bin:$PATH
 export NODE_PATH=~/.npm-packages/lib/node_modules
 
 # yazi

@@ -17,7 +17,7 @@ return {
         },
         gemini = {
             endpoint = "https://generativelanguage.googleapis.com/v1beta/models",
-            model = "gemini-2.0-flash",
+            model = "gemini-2.5-pro-preview-05-06",
             timeout = 30000,
             temperature = 0,
             max_tokens = 8192,
