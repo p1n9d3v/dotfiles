@@ -106,7 +106,6 @@
         dock.persistent-apps = [
           "/Applications/Obsidian.app"
           "/Applications/Ghostty.app"
-          "/Applications/Arc.app"
           "/Applications/Google Chrome.app"
           "/Applications/Espanso.app"
           "/Applications/Raycast.app"

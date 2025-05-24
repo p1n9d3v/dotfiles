@@ -6,6 +6,10 @@ local inputSourceHotkey = {
 	key = "space",
 }
 
+-- hs.hotkey.bind({ "alt" }, "space", function()
+-- 	hs.eventtap.keyStroke({ "cmd", "shift" }, "g")
+-- end)
+
 hs.hotkey.bind(inputSourceHotkey.mods, inputSourceHotkey.key, function()
 	-- Create and send Control+Shift+Space keystroke
 	local event = hs.eventtap.event.newKeyEvent({ "ctrl", "shift" }, "space", true)
@@ -206,9 +210,6 @@ end
 hs.hotkey.bind({ "alt" }, "T", function()
 	focusApp("Ghostty")
 end)
-hs.hotkey.bind({ "alt" }, "A", function()
-	focusApp("Arc")
-end)
 hs.hotkey.bind({ "alt" }, "G", function()
 	focusApp("Google Chrome")
 end)
@@ -231,9 +232,6 @@ end)
 
 hs.hotkey.bind({ "ctrl", "cmd" }, "T", function()
 	hs.execute("open -a Ghostty")
-end)
-hs.hotkey.bind({ "ctrl", "cmd" }, "A", function()
-	hs.execute("open -a Arc")
 end)
 hs.hotkey.bind({ "ctrl", "cmd" }, "O", function()
 	hs.execute("open -a Obsidian")
