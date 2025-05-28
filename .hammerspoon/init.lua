@@ -193,7 +193,6 @@ end
 -- 🔹 창 포커스 변경 감지
 local windowFilter = wf.new()
 windowFilter:subscribe(wf.windowFocused, function(win)
-	print(win:application())
 	if win and win:application():name() == "Ghostty" then
 		disableHotkeys() -- Ghostty 포커스 시 핫키 비활성화
 	else
