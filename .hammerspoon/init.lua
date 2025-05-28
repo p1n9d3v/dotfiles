@@ -220,7 +220,7 @@ hs.hotkey.bind({ "alt" }, "C", function()
 	focusApp("Claude")
 end)
 
-hs.hotkey.bind({ "alt" }, "K", function()
+hs.hotkey.bind({ "alt" }, "M", function()
 	hs.application.launchOrFocusByBundleID("com.kakao.KakaoTalkMac")
 end)
 
