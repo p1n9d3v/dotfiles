@@ -193,6 +193,7 @@ end
 -- 🔹 창 포커스 변경 감지
 local windowFilter = wf.new()
 windowFilter:subscribe(wf.windowFocused, function(win)
+	print(win:application():bundleID())
 	if win and win:application():name() == "Ghostty" then
 		disableHotkeys() -- Ghostty 포커스 시 핫키 비활성화
 	else
@@ -218,6 +219,11 @@ end)
 hs.hotkey.bind({ "alt" }, "C", function()
 	focusApp("Claude")
 end)
+
+hs.hotkey.bind({ "alt" }, "K", function()
+	hs.application.launchOrFocusByBundleID("com.kakao.KakaoTalkMac")
+end)
+
 hs.hotkey.bind({ "alt" }, "E", function()
 	local android = hs.application.find("qemu")
 	if android ~= nil then
