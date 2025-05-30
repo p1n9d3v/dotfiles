@@ -51,9 +51,10 @@ bindkey "^U" kill-whole-line
 bindkey "^[[119;6u" backward-kill-line
 
 
-bindkey -s '^O' 'cd ..^M'
+bindkey -s '^P' 'cd ..^M'
+bindkey -s ';5u' 'cd ..^M'
 # ^M or ^I
-bindkey -s ';5u' 'cd -^M'
+bindkey -s '^O' 'cd -^M'
 
 
 # select all line

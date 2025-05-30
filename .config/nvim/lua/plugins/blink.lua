@@ -28,8 +28,8 @@ return {
                 ["<C-f>"] = { "scroll_documentation_down", "fallback" },
             },
             completion = {
-                menu = { border = "single" },
-                documentation = { window = { border = "single" } },
+                menu = { border = "rounded" },
+                documentation = { window = { border = "rounded" } },
                 list = {
                     selection = {
                         preselect = false,
