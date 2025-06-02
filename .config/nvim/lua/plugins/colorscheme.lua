@@ -47,6 +47,14 @@ return {
                 -- ["@variable"] = {
                 --     fg = "${primary_red}",
                 -- },
+                -- SnacksPickerGitStatusAdded = {
+                --     fg = "${primary_black}",
+                --     bg = "${dark_red}",
+                -- },
+
+                SnacksPickerGitStatusUntracked = {
+                    fg = "${primary_red}",
+                },
             },
             styles = {
                 keywords = "italic",
