@@ -19,24 +19,39 @@ local fmta = require("luasnip.extras.fmt").fmta
 local types = require("luasnip.util.types")
 local conds = require("luasnip.extras.expand_conditions")
 
--- const component
 ls.add_snippets("typescriptreact", {
-    s("rcomp", {
-        t("interface "),
-        i(1, "Component"),
-        t("Props"),
-        t(" {}"),
-        t({ "", "export const " }),
-        rep(1),
-        t({ "", " = (props: " }),
-        rep(1),
-        t("Props)=> {"),
-        t({ "", "    return (" }),
-        t({ "", "        <>" }),
-        t({ "", "            " }),
-        t({ "", "        </>" }),
-        t({ "", "    );" }),
-        t({ "", "};" }),
+    s("rncomp", {
+        -- Import statement
+        t('import { StyleSheet, View } from "react-native";'),
         t({ "", "" }),
+
+        -- Interface definition
+        t("interface "),
+        i(1, "ComponentName"),
+        t("Props {"),
+        t({ "", "    " }),
+        i(2, "// props here"),
+        t({ "", "}" }),
+        t({ "", "" }),
+
+        -- Component function
+        t("export default function "),
+        rep(1),
+        t("(props: "),
+        rep(1),
+        t("Props) {"),
+        t({ "", "    const { " }),
+        i(3),
+        t(" } = props;"),
+        t({ "", "    return <View>" }),
+        i(4),
+        t("</View>;"),
+        t({ "", "}" }),
+        t({ "", "" }),
+
+        -- Styles
+        t("const styles = StyleSheet.create({"),
+        i(5),
+        t("});"),
     }),
 })
