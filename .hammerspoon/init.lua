@@ -224,6 +224,10 @@ hs.hotkey.bind({ "alt" }, "M", function()
 	hs.application.launchOrFocusByBundleID("com.kakao.KakaoTalkMac")
 end)
 
+hs.hotkey.bind({ "alt" }, "F", function()
+	hs.application.launchOrFocusByBundleID("com.figma.Desktop")
+end)
+
 hs.hotkey.bind({ "alt" }, "E", function()
 	local android = hs.application.find("qemu")
 	if android ~= nil then
