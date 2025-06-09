@@ -1,7 +1,7 @@
 % nix
 
 # Update nix pkgs
-darwin-rebuild switch --flake $HOME/dotfiles/.config/nix#$USER
+sudo darwin-rebuild switch --flake $HOME/dotfiles/.config/nix#$USER
 
 # Install nix darwin
 nix run nix-darwin/master#darwin-rebuild -- switch --flake $HOME/dotfiles/.config/nix#$USER
