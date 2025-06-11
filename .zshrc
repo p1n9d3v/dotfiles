@@ -127,6 +127,7 @@ eval $(thefuck --alias)
 export PATH=~/.npm-packages/bin:$PATH
 export PATH=~/.npm-global/bin:$PATH
 export NODE_PATH=~/.npm-packages/lib/node_modules
+export JAVA_HOME=/opt/homebrew/opt/openjdk@21
 
 # yazi
 function y() {

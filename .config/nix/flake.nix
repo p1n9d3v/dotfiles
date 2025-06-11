@@ -51,7 +51,7 @@
         brews = [ 
             "posting"
             "cocoapods" 
-            "openjdk"
+            "openjdk@21"
             "luarocks"
             "neovim"
         ];
@@ -69,6 +69,7 @@
           "docker"
           "obsidian"
           "raycast"
+          "claude"
         ];
         onActivation.cleanup="zap";
         onActivation.autoUpdate = true;
@@ -111,6 +112,7 @@
           "/Applications/DevToys.app"
           "/Applications/Ollama.app"
           "/Applications/AppCleaner.app"
+          "/Applications/Claude.app"
         ];
       };
 
