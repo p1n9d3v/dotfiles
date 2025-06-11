@@ -6,12 +6,13 @@ final_space = true
 
 [secondary_prompt]
   template = '❯❯ '
-  foreground = 'magenta'
+  foreground = '#ffffff'
   background = 'transparent'
 
 [transient_prompt]
   template = '❯ '
   background = 'transparent'
+  foreground = '#ffffff'
   foreground_templates = ['{{if gt .Code 0}}red{{end}}', '{{if eq .Code 0}}magenta{{end}}']
 
 [[blocks]]
