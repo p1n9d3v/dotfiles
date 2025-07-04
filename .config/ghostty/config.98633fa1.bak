@@ -49,4 +49,3 @@ keybind = cmd+enter=toggle_fullscreen
 
 keybind = ctrl+t>r=reload_config
 
-keybind = shift+enter=text:\n

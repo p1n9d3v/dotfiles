@@ -34,7 +34,6 @@
           pkgs.bat
           pkgs.rip2
           pkgs.navi
-          pkgs.nodejs_22
           pkgs.pngpaste
           pkgs.gh
           pkgs.dwt1-shell-color-scripts
@@ -54,6 +53,7 @@
             "openjdk@21"
             "luarocks"
             "neovim"
+            "node"
         ];
         casks = [
           "hammerspoon"

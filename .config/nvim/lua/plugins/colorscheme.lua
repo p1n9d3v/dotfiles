@@ -55,6 +55,10 @@ return {
                 SnacksPickerGitStatusUntracked = {
                     fg = "${primary_red}",
                 },
+
+                -- SnacksPickerGitStatusAdded = {
+                --     fg = "#82eefd",
+                -- },
             },
             styles = {
                 keywords = "italic",

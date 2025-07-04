@@ -10,21 +10,22 @@ return {
         providers = {
             claude = {
                 endpoint = "https://api.anthropic.com",
-                model = "claude-3-7-sonnet-latest", -- your desired model (or use gpt-4o, etc.)
+                model = "claude-sonnet-4-20250514", -- your desired model (or use gpt-4o, etc.)
                 timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
                 extra_request_body = {
-                    temperature = 0,
-                    max_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models)
+                    temperature = 0.3,
+                    max_tokens = 20480,
                     --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
                 },
             },
             gemini = {
                 endpoint = "https://generativelanguage.googleapis.com/v1beta/models",
-                model = "gemini-2.5-pro-preview-05-06",
+                model = "gemini-2.5-pro",
                 timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
                 extra_request_body = {
-                    temperature = 0,
-                    max_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models)
+                    temperature = 0.3,
+
+                    max_tokens = 20480,
                     --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
                 },
             },

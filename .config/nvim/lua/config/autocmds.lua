@@ -29,7 +29,6 @@ local autocmd = vim.api.nvim_create_autocmd
 autocmd("BufWritePre", {
     pattern = { "*.ts", "*.tsx", "*.js", "*.jsx" },
     callback = function()
-        -- EslintFixAll 명령어가 존재하는지 확인
         if vim.fn.exists(":EslintFixAll") ~= 0 then
             vim.cmd("EslintFixAll")
         end
