@@ -24,7 +24,6 @@ return {
                 timeout = 30000, -- Timeout in milliseconds, increase this for reasoning models
                 extra_request_body = {
                     temperature = 0.3,
-
                     max_tokens = 20480,
                     --reasoning_effort = "medium", -- low|medium|high, only used for reasoning models
                 },

@@ -1,5 +1,5 @@
 local vimouse = require("vimouse")
-vimouse("alt", "m")
+vimouse("cmd", "m")
 
 local hotkey = require("hs.hotkey")
 local wf = require("hs.window.filter")
