@@ -1,6 +1,12 @@
 return {
     "snacks.nvim",
     opts = {
+        zen = {
+            win = {
+                width = 0.5,
+            },
+        },
+
         scroll = { enabled = false },
 
         picker = {
