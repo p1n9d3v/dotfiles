@@ -70,6 +70,7 @@
           "obsidian"
           "raycast"
           "claude"
+          "karabiner-elements"
         ];
         onActivation.cleanup="zap";
         onActivation.autoUpdate = true;

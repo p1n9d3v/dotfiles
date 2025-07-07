@@ -49,6 +49,8 @@ keymap.set("n", "<C-b>", "^", opts)
 keymap.set("n", "<C-h>", "^", opts)
 keymap.set("n", "<C-e>", "$", opts)
 keymap.set("n", "<C-l>", "$", opts)
+keymap.set("n", "<D-C-h>", "^", opts)
+keymap.set("n", "<D-C-l>", "$", opts)
 
 -- Move Screen Up and Down
 keymap.set("n", "<C-u>", "<C-u>zz")

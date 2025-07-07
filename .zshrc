@@ -36,25 +36,25 @@ bindkey '^P' history-search-backward
 bindkey '^N' history-search-forward
 bindkey '^J' down-line-or-history
 bindkey '^K' up-line-or-history
-bindkey '^H' backward-char
-bindkey '^L' forward-char
-# ctrl + cmd + h
-bindkey "^[[104;5u" beginning-of-line
-# ctrl + cmd + l
-bindkey "^[[108;5u" end-of-line
-# ctrl + alt + l
-bindkey "^[^L" forward-word
-# ctrl + alt + h
-bindkey "^[^H" backward-word
+# bindkey '^H' backward-char
+# bindkey '^L' forward-char
+# # ctrl + cmd + h
+# bindkey "^[[104;5u" beginning-of-line
+# # ctrl + cmd + l
+# bindkey "^[[108;5u" end-of-line
+# # ctrl + alt + l
+# bindkey "^[^L" forward-word
+# # ctrl + alt + h
+# bindkey "^[^H" backward-word
 bindkey "^U" kill-whole-line
 # ctrl+ shift + w
 bindkey "^[[119;6u" backward-kill-line
 
 
-bindkey -s '^P' 'cd ..^M'
-bindkey -s ';5u' 'cd ..^M'
+bindkey -s '^B' 'cd ..^M'
 # ^M or ^I
-bindkey -s '^O' 'cd -^M'
+# bindkey -s ';5u' 'cd -^M'
+ bindkey -s '^O' 'cd -^M'
 
 
 # select all line
