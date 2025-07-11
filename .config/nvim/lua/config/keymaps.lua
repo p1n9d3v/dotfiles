@@ -21,7 +21,9 @@ keymap.set("n", "db", "vbd")
 keymap.set("n", "<C-m>", "<C-i>", opts)
 
 -- Select all
-keymap.set("n", "<C-a>", "gg<S-v>G")
+-- keymap.set("n", "<A-a>", "gg<S-v>G")
+keymap.set("v", "<S-a>", "gg<S-v>G")
+keymap.set("n", "<D-a>", "gg<S-v>G")
 
 -- New Tab
 keymap.set("n", "te", ":tabedit")
@@ -45,12 +47,8 @@ keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
 -- Move Line
-keymap.set("n", "<C-b>", "^", opts)
-keymap.set("n", "<C-h>", "^", opts)
+keymap.set("n", "<C-a>", "^", opts)
 keymap.set("n", "<C-e>", "$", opts)
-keymap.set("n", "<C-l>", "$", opts)
-keymap.set("n", "<D-C-h>", "^", opts)
-keymap.set("n", "<D-C-l>", "$", opts)
 
 -- Move Screen Up and Down
 keymap.set("n", "<C-u>", "<C-u>zz")

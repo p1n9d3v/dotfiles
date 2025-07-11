@@ -27,31 +27,31 @@ ls.add_snippets("typescriptreact", {
 
         -- Interface definition
         t("interface "),
-        i(1, "ComponentName"),
+        i(7, "ComponentName"),
         t("Props {"),
         t({ "", "    " }),
-        i(2, "// props here"),
+        i(8, "// props here"),
         t({ "", "}" }),
         t({ "", "" }),
 
         -- Component function
         t("export default function "),
-        rep(1),
+        rep(7),
         t("(props: "),
-        rep(1),
+        rep(7),
         t("Props) {"),
         t({ "", "    const { " }),
-        i(3),
+        i(9),
         t(" } = props;"),
         t({ "", "    return <View>" }),
-        i(4),
+        i(10),
         t("</View>;"),
         t({ "", "}" }),
         t({ "", "" }),
 
         -- Styles
         t("const styles = StyleSheet.create({"),
-        i(5),
+        i(11),
         t("});"),
     }),
 })

@@ -1,6 +1,7 @@
 theme = onedark_dark 
 
 macos-option-as-alt = true
+keybind = cmd+a=unbind
 
 background = #000
 background-opacity = 0.7

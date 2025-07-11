@@ -38,14 +38,16 @@ bindkey '^J' down-line-or-history
 bindkey '^K' up-line-or-history
 # bindkey '^H' backward-char
 # bindkey '^L' forward-char
+
+
 # # ctrl + cmd + h
-# bindkey "^[[104;5u" beginning-of-line
+bindkey "^[[104;5u" beginning-of-line
 # # ctrl + cmd + l
-# bindkey "^[[108;5u" end-of-line
+bindkey "^[[108;5u" end-of-line
 # # ctrl + alt + l
-# bindkey "^[^L" forward-word
+bindkey "^[^L" forward-word
 # # ctrl + alt + h
-# bindkey "^[^H" backward-word
+bindkey "^[^H" backward-word
 bindkey "^U" kill-whole-line
 # ctrl+ shift + w
 bindkey "^[[119;6u" backward-kill-line
