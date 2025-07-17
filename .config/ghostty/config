@@ -14,14 +14,16 @@ bold-is-bright = true
 
 auto-update = download
 
+
+
 keybind = global:ctrl+cmd+q=toggle_quick_terminal
 
 keybind = ctrl+t>x=close_window
 
-keybind = ctrl+t>w>l=resize_split:right,20
-keybind = ctrl+t>w>h=resize_split:left,20
-keybind = ctrl+t>w>j=resize_split:down,20
-keybind = ctrl+t>w>u=resize_split:up,20
+keybind = ctrl+t>w>l=resize_split:right,100
+keybind = ctrl+t>w>h=resize_split:left,100
+keybind = ctrl+t>w>j=resize_split:down,100
+keybind = ctrl+t>w>u=resize_split:up,100
 
 keybind = ctrl+t>s>l=new_split:right
 keybind = ctrl+t>s>h=new_split:left
@@ -34,6 +36,12 @@ keybind = ctrl+t>h=goto_split:left
 keybind = ctrl+t>j=goto_split:down
 keybind = ctrl+t>k=goto_split:up
 
+keybind = ctrl+t>g>one=goto_tab:1
+keybind = ctrl+t>g>two=goto_tab:2
+keybind = ctrl+t>g>three=goto_tab:3
+keybind = ctrl+t>g>four=goto_tab:4
+keybind = ctrl+t>g>five=goto_tab:5
+
 keybind = ctrl+t>c=new_tab
 keybind = ctrl+t>p=previous_tab
 keybind = ctrl+t>n=next_tab
@@ -43,6 +51,7 @@ keybind = ctrl+t>f>d=decrease_font_size:0.5
 
 keybind = ctrl+t>i=inspector:toggle
 
+
 keybind = ctrl+t>u=scroll_page_up
 keybind = ctrl+t>d=scroll_page_down
 
@@ -51,3 +60,7 @@ keybind = cmd+enter=toggle_fullscreen
 keybind = ctrl+t>r=reload_config
 
 keybind = shift+enter=text:\n
+
+
+
+
