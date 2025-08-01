@@ -1,6 +1,3 @@
-local vimouse = require("vimouse")
-vimouse("cmd", "m")
-
 -- Config Reload
 hs.hotkey.bind({ "ctrl", "cmd" }, "r", function()
 	hs.reload()
@@ -43,3 +40,20 @@ if not (input_source == inputEnglish) then
 end
 
 hs.eventtap.keyStroke({}, "escape")
+
+--- Hyper key
+local hyper_key = { "cmd", "alt", "ctrl", "shift" }
+
+-- Emulator
+hs.hotkey.bind(hyper_key, "e", function()
+	local android = hs.application.find("qemu")
+	android:activate()
+	if android ~= nil then
+		android:activate()
+	end
+	local simulator = hs.application.find("Simulator")
+	simulator:activate()
+	if simulator ~= nil then
+		simulator:activate()
+	end
+end)
