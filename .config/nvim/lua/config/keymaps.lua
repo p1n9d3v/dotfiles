@@ -48,6 +48,7 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 
 -- Move Line
 keymap.set("n", "<C-a>", "^", opts)
+keymap.set("n", "<C-i>", "^", opts)
 keymap.set("n", "<C-e>", "$", opts)
 
 -- Move Screen Up and Down
@@ -78,8 +79,8 @@ end, {
 })
 
 -- Multi Cursor
-keymap.set("n", "<C-j>", "<Plug>(VM-Add-Cursor-Down)", opts)
-keymap.set("n", "<C-k>", "<Plug>(VM-Add-Cursor-Up)", opts)
+keymap.set("n", "<D-j>", "<Plug>(VM-Add-Cursor-Down)", opts)
+keymap.set("n", "<D-k>", "<Plug>(VM-Add-Cursor-Up)", opts)
 
 -- cmdline
 keymap.set("c", "<C-j>", 'pumvisible() ? "<c-n>" : "<C-j>"', { expr = true, noremap = true })

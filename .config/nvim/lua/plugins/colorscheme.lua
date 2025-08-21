@@ -59,6 +59,22 @@ return {
                 -- SnacksPickerGitStatusAdded = {
                 --     fg = "#82eefd",
                 -- },
+                TreesitterContextBottom = {
+                    bg = "${dark_red}",
+                    style = "bold",
+                    -- style = "italic",
+                    -- style = "underline",
+                    -- style = "reverse",
+                    -- style = "standout",
+                    -- style = "NONE",
+                },
+                TreesitterContextLineNumberBottom = {
+                    fg = "${white}",
+                    bg = "${light_red}",
+                },
+                TreesitterContextSeparator = {
+                    fg = "${light_red}",
+                },
             },
             styles = {
                 keywords = "italic",
