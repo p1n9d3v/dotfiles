@@ -27,3 +27,5 @@ vim.diagnostic.config({
 })
 
 vim.g.autoformat = true
+
+vim.lsp.set_log_level("DEBUG")
