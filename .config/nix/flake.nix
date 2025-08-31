@@ -48,7 +48,6 @@
       homebrew = {
         enable = true;
         brews = [ 
-            "posting"
             "cocoapods" 
             "openjdk@21"
             "luarocks"
@@ -58,7 +57,6 @@
         casks = [
           "hammerspoon"
           "ghostty"
-          "espanso"
           "appcleaner"
           "devtoys"
           "ollama"
