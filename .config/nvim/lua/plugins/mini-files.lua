@@ -1,9 +1,9 @@
 return {
-  "echasnovski/mini.files",
-  lazy = true,
-  opts = {
-    mappings = {
-      synchronize = "<CR>",
+    "nvim-mini/mini.files",
+    lazy = true,
+    opts = {
+        mappings = {
+            synchronize = "<CR>",
+        },
     },
-  },
 }

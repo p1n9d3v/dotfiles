@@ -18,7 +18,7 @@ auto-update = download
 
 keybind = global:ctrl+cmd+q=toggle_quick_terminal
 
-keybind = ctrl+t>x=close_window
+keybind = ctrl+t>x=close_surface
 
 keybind = ctrl+t>w>l=resize_split:right,100
 keybind = ctrl+t>w>h=resize_split:left,100

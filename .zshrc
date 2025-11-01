@@ -49,6 +49,7 @@ bindkey "^[^L" forward-word
 # # ctrl + alt + h
 bindkey "^[^H" backward-word
 bindkey "^U" kill-whole-line
+bindkey "^[[101;6u" kill-line
 # ctrl+ shift + w
 bindkey "^[[119;6u" backward-kill-line
 
@@ -165,3 +166,10 @@ if [ -f '/Users/p1n9/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/p1n9/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/p1n9/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# bun completions
+[ -s "/Users/p1n9/.bun/_bun" ] && source "/Users/p1n9/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

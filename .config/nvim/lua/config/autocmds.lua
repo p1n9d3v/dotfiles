@@ -25,12 +25,12 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
-local autocmd = vim.api.nvim_create_autocmd
-autocmd("BufWritePre", {
-    pattern = { "*.ts", "*.tsx", "*.js", "*.jsx" },
-    callback = function()
-        if vim.fn.exists(":EslintFixAll") ~= 0 then
-            vim.cmd("EslintFixAll")
-        end
-    end,
-})
+-- local autocmd = vim.api.nvim_create_autocmd
+-- autocmd("BufWritePre", {
+--     pattern = { "*.ts", "*.tsx", "*.js", "*.jsx" },
+--     callback = function()
+--         if vim.fn.exists(":EslintFixAll") ~= 0 then
+--             vim.cmd("EslintFixAll")
+--         end
+--     end,
+-- })
