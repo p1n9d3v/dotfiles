@@ -8,6 +8,90 @@ return {
         local dap = require("dap")
         local dapui = require("dapui")
 
+        vim.schedule(function()
+            dapui.setup({
+                controls = {
+                    element = "repl",
+                    enabled = true,
+                    icons = {
+                        disconnect = "",
+                        pause = "",
+                        play = "",
+                        run_last = "",
+                        step_back = "",
+                        step_into = "",
+                        step_out = "",
+                        step_over = "",
+                        terminate = "",
+                    },
+                },
+                element_mappings = {},
+                expand_lines = true,
+                floating = {
+                    border = "rounded",
+                    mappings = {
+                        close = { "q", "<Esc>" },
+                    },
+                },
+                force_buffers = true,
+                icons = {
+                    collapsed = "",
+                    current_frame = "",
+                    expanded = "",
+                },
+                layouts = {
+                    {
+                        elements = {
+                            {
+                                id = "scopes",
+                                size = 0.25,
+                            },
+                            {
+                                id = "breakpoints",
+                                size = 0.25,
+                            },
+                            {
+                                id = "stacks",
+                                size = 0.25,
+                            },
+                            {
+                                id = "watches",
+                                size = 0.25,
+                            },
+                        },
+                        position = "right",
+                        size = 50,
+                    },
+                    {
+                        elements = {
+                            {
+                                id = "repl",
+                                size = 0.5,
+                            },
+                            {
+                                id = "console",
+                                size = 0.5,
+                            },
+                        },
+                        position = "bottom",
+                        size = 10,
+                    },
+                },
+                mappings = {
+                    edit = "e",
+                    expand = { "<CR>", "<2-LeftMouse>" },
+                    open = "o",
+                    remove = "d",
+                    repl = "r",
+                    toggle = "t",
+                },
+                render = {
+                    indent = 1,
+                    max_value_lines = 100,
+                },
+            })
+        end)
+
         for _, adapterType in ipairs({ "node", "chrome", "msedge" }) do
             local pwaType = "pwa-" .. adapterType
 
@@ -193,21 +277,37 @@ return {
             dapui.close()
         end
 
-        vim.keymap.set("n", "<Leader>dt", dap.toggle_breakpoint, { desc = "Toggle breakpoint" })
-        vim.keymap.set("n", "<Leader>dbc", dap.clear_breakpoints, { desc = "Clear all breakpoints" })
-        vim.keymap.set("n", "<Leader>dbl", dap.list_breakpoints, { desc = "Clear all breakpoints" })
-
-        local continue = function()
-            -- support for vscode launch.json is partial.
-            -- not all configuration options and features supported
-            if vim.fn.filereadable(".vscode/launch.json") then
-                require("dap.ext.vscode").load_launchjs()
-            end
-            dap.continue()
-        end
-
-        vim.keymap.set("n", "<Leader>dc", continue, { desc = "Continue" })
+        -- vim.keymap.set("n", "<Leader>dt", dap.toggle_breakpoint, { desc = "Toggle breakpoint" })
+        -- vim.keymap.set("n", "<Leader>dbc", dap.clear_breakpoints, { desc = "Clear all breakpoints" })
+        -- vim.keymap.set("n", "<Leader>dbl", dap.list_breakpoints, { desc = "Clear all breakpoints" })
+        --
+        -- local continue = function()
+        --     -- support for vscode launch.json is partial.
+        --     -- not all configuration options and features supported
+        --     if vim.fn.filereadable(".vscode/launch.json") then
+        --         require("dap.ext.vscode").load_launchjs()
+        --     end
+        --     dap.continue()
+        -- end
+        --
+        -- vim.keymap.set("n", "<Leader>dc", continue, { desc = "Continue" })
     end,
+    keys = {
+        {
+            "<leader>dO",
+            function()
+                require("dap").step_out()
+            end,
+            desc = "Step Out",
+        },
+        {
+            "<leader>do",
+            function()
+                require("dap").step_over()
+            end,
+            desc = "Step Over",
+        },
+    },
 }
 
 -- return {
