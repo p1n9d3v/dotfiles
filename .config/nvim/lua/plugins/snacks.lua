@@ -124,18 +124,30 @@ return {
     },
     keys = {
         {
-            "<leader>e",
+            "<leader>E",
             function()
-                local current_dir = vim.fn.getcwd()
+                -- 찾고자 하는 프로젝트 루트 마커들
+                local root_markers = { "package.json" }
 
-                Snacks.explorer({
-                    cwd = vim.fn.expand("%:p:h"),
-                })
+                -- 현재 열린 파일의 디렉토리
+                local current_file_dir = vim.fn.expand("%:p:h")
+
+                -- 현재 디렉토리부터 상위로 올라가며 마커를 찾습니다.
+                -- vim.fs.find는 찾은 마커 파일의 *전체 경로*를 반환합니다.
+                local found_marker_path = vim.fs.find(root_markers, { path = current_file_dir, upward = true })[1]
+
+                if found_marker_path then
+                    -- 찾은 마커가 포함된 디렉토리(즉, 프로젝트 루트)를 가져옵니다.
+                    local project_root = vim.fn.fnamemodify(found_marker_path, ":h")
+                    Snacks.explorer({ cwd = project_root })
+                else
+                    print("프로젝트 루트 마커를 찾지 못했습니다.")
+                end
             end,
             desc = "File Explorer",
         },
         {
-            "<leader>E",
+            "<leader>e",
             function()
                 -- 찾고자 하는 프로젝트 루트 마커들
                 local root_markers = { ".git", "init.lua" }
