@@ -10,6 +10,9 @@ return {
         scroll = { enabled = false },
 
         picker = {
+            layout = {
+                preset = "telescope",
+            },
             win = {
                 list = {
                     keys = {

@@ -27,46 +27,22 @@ return {
                 },
                 Visual = { bg = "${dark_red}" },
                 FloatBorder = { fg = "${primary_red}", bg = "${none}" },
-
-                -- LazyGit
                 LazyGitBorder = { fg = "${primary_red}", bg = "${none}" },
-
-                -- Blink
                 BlinkCmpDocBorder = {
                     fg = "${primary_red}",
                 },
-
                 BlinkCmpMenuBorder = {
                     fg = "${primary_red}",
                 },
-
                 BlinkCmpSignatureHelpBorder = {
                     fg = "${primary_red}",
                 },
-
-                -- ["@variable"] = {
-                --     fg = "${primary_red}",
-                -- },
-                -- SnacksPickerGitStatusAdded = {
-                --     fg = "${primary_black}",
-                --     bg = "${dark_red}",
-                -- },
-
                 SnacksPickerGitStatusUntracked = {
                     fg = "${primary_red}",
                 },
-
-                -- SnacksPickerGitStatusAdded = {
-                --     fg = "#82eefd",
-                -- },
                 TreesitterContextBottom = {
                     bg = "${dark_red}",
                     style = "bold",
-                    -- style = "italic",
-                    -- style = "underline",
-                    -- style = "reverse",
-                    -- style = "standout",
-                    -- style = "NONE",
                 },
                 TreesitterContextLineNumberBottom = {
                     fg = "${white}",
@@ -74,6 +50,28 @@ return {
                 },
                 TreesitterContextSeparator = {
                     fg = "${light_red}",
+                },
+
+                LspReferenceRead = {
+                    bg = "#3b4048",
+                    fg = "${light_red}",
+                    undercurl = true,
+                    bold = true,
+                    sp = "#FFD700",
+                },
+                LspReferenceText = {
+                    bg = "#3b4048",
+                    fg = "${light_red}",
+                    undercurl = true,
+                    bold = true,
+                    sp = "#FFD700",
+                },
+                LspReferenceWrite = {
+                    bg = "#3b4048",
+                    fg = "${light_red}",
+                    bold = true,
+                    undercurl = true,
+                    sp = "#FFD700",
                 },
             },
             styles = {
@@ -87,10 +85,23 @@ return {
         },
     },
     {
+        "loctvl842/monokai-pro.nvim",
+        priority = 1000, -- Ensure it loads first
+        opts = {
+            transparent_background = true,
+            devicons = true,
+            override = function(c)
+                return {
+                    DiagnosticUnnecessary = { fg = c.base.dimmed3, italic = true },
+                }
+            end,
+        },
+    },
+    {
         "LazyVim/LazyVim",
         opts = {
-
-            colorscheme = "onedark_dark",
+            -- colorscheme = "onedark_dark",
+            colorscheme = "monokai-pro",
         },
     },
 }
