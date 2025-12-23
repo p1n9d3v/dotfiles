@@ -100,8 +100,3 @@ keymap.set("v", "<C-e>", "$", opts)
 keymap.set("v", "<C-a>", "^", opts)
 keymap.set("v", "<S-D>l", "$", opts)
 keymap.set("v", "<S-D>h", "^", opts)
-
-keymap.set("n", "<leader>pp", '"0p', opts)
-keymap.set("n", "<leader>pP", '"0P', opts)
-keymap.set("v", "<leader>pp", '"0p', opts)
-keymap.set("v", "<leader>pP", '"0P', opts)
