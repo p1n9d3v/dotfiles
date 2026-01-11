@@ -3,13 +3,11 @@ return {
         "saghen/blink.compat",
         lazy = true,
         opts = {},
-        config = function()
-            -- monkeypatch cmp.ConfirmBehavior for Avante
-            require("cmp").ConfirmBehavior = {
-                Insert = "insert",
-                Replace = "replace",
-            }
-        end,
+    },
+    {
+        "zbirenbaum/copilot-cmp",
+        dependencies = "zbirenbaum/copilot.lua",
+        config = true,
     },
     {
 
@@ -20,95 +18,56 @@ return {
             snippets = { preset = "luasnip" },
             keymap = {
                 ["<C-e>"] = { "hide", "fallback" },
-                ["<C-y>"] = { "select_and_accept", "fallback" },
+                -- ["<C-y>"] = { "select_and_accept", "fallback" },
+                ["<C-y>"] = {
+                    function(cmp)
+                        -- blink 메뉴 열려있으면 blink 선택
+                        if cmp.is_menu_visible() then
+                            return cmp.select_and_accept()
+                        end
+                        -- Copilot ghost 있으면 Copilot 선택
+                        local ok, copilot = pcall(require, "copilot.suggestion")
+                        if ok and copilot.is_visible() then
+                            copilot.accept()
+                            return true
+                        end
+                    end,
+                    "fallback",
+                },
                 ["<CR>"] = { "accept", "fallback" },
                 ["<C-j>"] = { "select_next", "fallback" },
                 ["<C-k>"] = { "select_prev", "fallback" },
                 ["<C-b>"] = { "scroll_documentation_up", "fallback" },
                 ["<C-f>"] = { "scroll_documentation_down", "fallback" },
+                ["<Tab>"] = { "snippet_forward", "select_next", "fallback" },
+                ["<S-Tab>"] = { "snippet_backward", "select_prev", "fallback" },
             },
             completion = {
-                menu = { border = "rounded" },
+                menu = { border = "rounded", auto_show = true },
                 documentation = { window = { border = "rounded" } },
                 list = {
                     selection = {
-                        preselect = false,
+                        preselect = true,
                         auto_insert = false,
                     },
                 },
                 ghost_text = {
                     enabled = true,
+                    show_with_menu = true,
                 },
             },
             cmdline = {
                 enabled = false,
-                keymap = {
-                    -- recommended, as the default keymap will only show and select the next item
-                    ["<Tab>"] = { "show", "accept" },
-                    ["<C-j>"] = { "select_next", "fallback" },
-                    ["<C-k>"] = { "select_prev", "fallback" },
-                    ["<C-e>"] = { "hide", "fallback" },
-                    ["<C-y>"] = { "select_and_accept", "fallback" },
-                    ["<CR>"] = { "accept", "fallback" },
-                },
-                sources = function()
-                    local type = vim.fn.getcmdtype()
-
-                    if type == "/" or type == "?" then
-                        return { "buffer" }
-                    end
-                    if type == ":" or type == "@" then
-                        return { "cmdline" }
-                    end
-                    return {}
-                end,
-                completion = {
-                    menu = {
-                        draw = {
-                            columns = { { "kind_icon", "label", "label_description" } },
-                        },
-                    },
-                },
             },
             sources = {
-                compat = {
-                    "avante_commands",
-                    "avante_mentions",
-                    "avante_files",
-                    "obsidian",
-                    "obsidian_new",
-                    "obsidian_tags",
-                },
+                default = { "copilot", "lsp", "path", "snippets", "buffer" },
+                compat = { "copilot" },
                 providers = {
-                    obsidian = {
-                        name = "obsidian",
+                    copilot = {
+                        name = "copilot",
                         module = "blink.compat.source",
-                    },
-                    obsidian_new = {
-                        name = "obsidian_new",
-                        module = "blink.compat.source",
-                    },
-                    obsidian_tags = {
-                        name = "obsidian_tags",
-                        module = "blink.compat.source",
-                    },
-                    avante_commands = {
-                        name = "avante_commands",
-                        module = "blink.compat.source",
-                        score_offset = 90, -- show at a higher priority than lsp
-                        opts = {},
-                    },
-                    avante_files = {
-                        name = "avante_files",
-                        module = "blink.compat.source",
-                        score_offset = 100, -- show at a higher priority than lsp
-                        opts = {},
-                    },
-                    avante_mentions = {
-                        name = "avante_mentions",
-                        module = "blink.compat.source",
-                        score_offset = 1000, -- show at a higher priority than lsp
-                        opts = {},
+                        score_offset = 100,
+                        async = true,
                     },
                 },
             },

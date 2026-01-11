@@ -93,6 +93,13 @@ return {
             override = function(c)
                 return {
                     DiagnosticUnnecessary = { fg = c.base.dimmed3, italic = true },
+                    LineNr = {
+                        fg = "#9D7CD8",
+                    },
+                    CursorLineNr = {
+                        fg = "#FF9E64",
+                        bold = true,
+                    },
                 }
             end,
         },

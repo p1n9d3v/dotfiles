@@ -29,3 +29,8 @@ vim.diagnostic.config({
 vim.g.autoformat = true
 
 -- vim.lsp.set_log_level("DEBUG")
+-- vim.lsp.config("copilot", {
+--     cmd = { "copilot-language-server", "--stdio" },
+--     root_markers = { ".git" },
+-- })
+-- vim.lsp.enable("copilot")

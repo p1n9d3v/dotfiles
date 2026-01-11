@@ -17,27 +17,27 @@ nix flake  update nix-darwin --flake $HOME/dotfiles/.config/nix
 cd $HOME/dotfiles && stow . --adopt && cd -
 
 
-% ollama
-
-# Run llama3.2 inline
-ollama run llama3.2 "<text>"
-
-
 % nvim 
 
 # Sync nvim lua to dotfiles
 cp -r ~/.config/nvim/lua ~/dotfiles/.config/nvim
 
 
-% quartz
-
-# Serve 
-
-npx quartz build --serve
+% firebase(tourstory)
 
 
-# Upload
 
-npx quartz sync
+# firestore backup 
+
+
+gcloud firestore export <base_url>/manual-backup/<date> --collection-ids=<collection-ids> --project <project_id> 
+
+$ project_id: echo "kint-2"
+$ base_url: echo "gs://kint-2.appspot.com"
+
+# download
+gsutil -m cp -r gs://kint-2.appspot.com/manual-backups/<date> <path>
+
+
 
 

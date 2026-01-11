@@ -20,6 +20,20 @@ return {
                         ["sv"] = "edit_vsplit",
                     },
                 },
+
+                input = {
+                    keys = {
+                        ["<a-a>"] = {
+                            "sidekick_send",
+                            mode = { "n", "i" },
+                        },
+                    },
+                },
+            },
+            actions = {
+                sidekick_send = function(...)
+                    return require("sidekick.cli.picker.snacks").send(...)
+                end,
             },
             sources = {
                 files = { hidden = true },

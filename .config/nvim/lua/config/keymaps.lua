@@ -100,3 +100,5 @@ keymap.set("v", "<C-e>", "$", opts)
 keymap.set("v", "<C-a>", "^", opts)
 keymap.set("v", "<S-D>l", "$", opts)
 keymap.set("v", "<S-D>h", "^", opts)
+
+keymap.set("n", "<leader>o", ":Oil<Return>", opts)
