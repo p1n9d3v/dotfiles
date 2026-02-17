@@ -100,7 +100,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 source <(fzf --zsh)
 
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init --cmd z zsh)"
 
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
@@ -126,8 +126,6 @@ export EDITOR=/run/current-system/sw/bin/nvim
 export NAVI_PATH=$HOME/.config/navi
 export ANDROID_HOME=$HOME/Library/Android/sdk
 
-# espanso
-export CONFIG=$HOME/.config/espanso
 eval $(thefuck --alias)
 
 
@@ -135,18 +133,6 @@ export PATH=~/.npm-packages/bin:$PATH
 export PATH=~/.npm-global/bin:$PATH
 export NODE_PATH=~/.npm-packages/lib/node_modules
 export JAVA_HOME=/opt/homebrew/opt/openjdk@21
-
-# yazi
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	# rm -f -- "$tmp"
-    rm -- "$tmp"
-}
-
 
 
 export NVM_DIR="$HOME/.config/nvm"
@@ -173,3 +159,11 @@ if [ -f '/Users/p1n9/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/p1n9/googl
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/p1n9/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/p1n9/google-cloud-sdk/completion.zsh.inc'; fi
+
+
+# Claude strategic-compact env
+COMPACT_THRESHOLD=70
+
+. "$HOME/.local/bin/env"
+
+EDITOR=nvim

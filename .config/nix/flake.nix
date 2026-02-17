@@ -20,7 +20,6 @@
         [ 
           pkgs.git
           pkgs.gcc14
-          pkgs.nushell
           pkgs.eza
           pkgs.fzf
           pkgs.zoxide
@@ -33,15 +32,13 @@
           pkgs.tldr
           pkgs.bat
           pkgs.rip2
-          pkgs.navi
-          pkgs.pngpaste
           pkgs.gh
-          pkgs.dwt1-shell-color-scripts
           pkgs.lazydocker
           pkgs.dive
           pkgs.fd
-          pkgs.yazi
+          pkgs.superfile
           pkgs.lua
+          pkgs.tmux
         ];
 
       # Homebrew
@@ -58,14 +55,11 @@
           "hammerspoon"
           "ghostty"
           "appcleaner"
-          "devtoys"
           "ollama"
           "google-chrome"
           "slack"
-          "flutter"
           "android-studio"
           "docker"
-          "obsidian"
           "raycast"
           "claude"
           "karabiner-elements"
@@ -103,12 +97,9 @@
       system.defaults = {
         dock.autohide = true;
         dock.persistent-apps = [
-          "/Applications/Obsidian.app"
           "/Applications/Ghostty.app"
           "/Applications/Google Chrome.app"
-          "/Applications/Espanso.app"
           "/Applications/Raycast.app"
-          "/Applications/DevToys.app"
           "/Applications/Ollama.app"
           "/Applications/AppCleaner.app"
           "/Applications/Claude.app"

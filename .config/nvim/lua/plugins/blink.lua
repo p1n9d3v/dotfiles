@@ -7,40 +7,32 @@ return {
     {
         "zbirenbaum/copilot-cmp",
         dependencies = "zbirenbaum/copilot.lua",
-        config = true,
+        config = function()
+            require("copilot_cmp").setup()
+        end,
     },
     {
-
         "saghen/blink.cmp",
         lazy = true,
         dependencies = { "L3MON4D3/LuaSnip", version = "v2.*" },
         opts = {
+            appearance = {
+                kind_icons = {
+                    Copilot = "󰊤", -- 또는 "󰊤" "󱜙" "󰋦"
+                    -- 기존 기본 아이콘들은 그대로 유지됨
+                },
+            },
             snippets = { preset = "luasnip" },
             keymap = {
                 ["<C-e>"] = { "hide", "fallback" },
-                -- ["<C-y>"] = { "select_and_accept", "fallback" },
-                ["<C-y>"] = {
-                    function(cmp)
-                        -- blink 메뉴 열려있으면 blink 선택
-                        if cmp.is_menu_visible() then
-                            return cmp.select_and_accept()
-                        end
-                        -- Copilot ghost 있으면 Copilot 선택
-                        local ok, copilot = pcall(require, "copilot.suggestion")
-                        if ok and copilot.is_visible() then
-                            copilot.accept()
-                            return true
-                        end
-                    end,
-                    "fallback",
-                },
+                ["<C-y>"] = { "select_and_accept", "fallback" },
                 ["<CR>"] = { "accept", "fallback" },
-                ["<C-j>"] = { "select_next", "fallback" },
-                ["<C-k>"] = { "select_prev", "fallback" },
+                ["<C-n>"] = { "select_next", "fallback" },
+                ["<C-p>"] = { "select_prev", "fallback" },
                 ["<C-b>"] = { "scroll_documentation_up", "fallback" },
                 ["<C-f>"] = { "scroll_documentation_down", "fallback" },
-                ["<Tab>"] = { "snippet_forward", "select_next", "fallback" },
-                ["<S-Tab>"] = { "snippet_backward", "select_prev", "fallback" },
+                ["<Tab>"] = { "fallback" },
+                ["<S-Tab>"] = { "fallback" },
             },
             completion = {
                 menu = { border = "rounded", auto_show = true },
@@ -68,6 +60,15 @@ return {
                         module = "blink.compat.source",
                         score_offset = 100,
                         async = true,
+                        transform_items = function(_, items)
+                            local CompletionItemKind = require("blink.cmp.types").CompletionItemKind
+                            local kind_idx = #CompletionItemKind + 1
+                            CompletionItemKind[kind_idx] = "Copilot"
+                            for _, item in ipairs(items) do
+                                item.kind = kind_idx
+                            end
+                            return items
+                        end,
                     },
                 },
             },

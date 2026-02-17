@@ -102,3 +102,26 @@ keymap.set("v", "<S-D>l", "$", opts)
 keymap.set("v", "<S-D>h", "^", opts)
 
 keymap.set("n", "<leader>o", ":Oil<Return>", opts)
+
+-- 현재 파일의 전체 경로 복사 (<leader>fy)
+vim.keymap.set("n", "<leader>fy", function()
+    local path = vim.fn.expand("%:p") -- %:p는 현재 파일의 전체 경로를 의미합니다.
+    vim.fn.setreg("+", path)
+    vim.notify("Copied path to clipboard: " .. path)
+end, { desc = "Copy current file path" })
+
+keymap.set("n", "<leader>cP", function()
+    vim.cmd("RenderMarkdown preview")
+end, opts)
+
+-- Terminals
+keymap.set("n", "<leader>Tl", "<cmd>TermSelect<cr>", { desc = "Snacks Terminal List" })
+
+-- Lspsaga keymaps
+-- keymap.set("n", "<leader>cO", "<cmd>Lspsaga outgoing_calls<CR>", { desc = "Lspsaga Outgoing Calls" })
+-- keymap.set("n", "<leader>cI", "<cmd>Lspsaga incoming_calls<CR>", { desc = "Lspsaga Incoming Calls" })
+-- keymap.set("n", "<leader>cK", "<cmd>Lspsaga finder<CR>", { desc = "Lspsaga Finder" })
+
+-- Aerial
+
+keymap.set("n", "<leader>A", "<cmd>AerialToggle!<CR>", opts)

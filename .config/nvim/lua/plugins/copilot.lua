@@ -3,12 +3,13 @@ return {
     cmd = "Copilot",
     build = ":Copilot auth",
     event = "BufReadPost",
+    enabled = true, -- ← 켜기
     opts = {
         suggestion = {
-            enabled = true, -- 강제로 켜기
+            enabled = false, -- blink ghost_text로 대체
             auto_trigger = true,
             keymap = {
-                accept = false, -- blink에서 처리
+                accept = false,
                 next = "<M-]>",
                 prev = "<M-[>",
             },

@@ -16,7 +16,13 @@ auto-update = download
 
 
 
-keybind = global:ctrl+cmd+q=toggle_quick_terminal
+
+quick-terminal-position = center
+quick-terminal-screen = main
+quick-terminal-animation-duration = 0.2
+quick-terminal-size = 90%,90%
+
+keybind = ctrl+t>t=toggle_quick_terminal
 
 keybind = ctrl+t>x=close_surface
 
